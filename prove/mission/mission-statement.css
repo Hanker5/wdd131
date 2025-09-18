@@ -1,0 +1,41 @@
+#content {
+    margin: 0 auto;
+    max-width: 30%;
+    text-align: center;
+    border: 1px solid gray;
+    padding: 60px 100px;
+    line-height: 1.5em;
+}
+#content hr {
+    margin-top: 0px;
+    color: gray;
+}
+#content h2{
+    font-size: 15px;
+    margin-bottom: 0px;
+    color: #035f9c;
+}
+
+#info {
+    text-align: left;
+    margin-top: 30px;
+}
+
+#logo {
+    line-height: 0px;
+    margin-top: 50px;
+}
+#logo h1 {
+    color: #035f9c;
+}
+#logo hr {
+    max-width: 15%;
+    color: #035f9c;
+}
+#logo h2{
+    font-size: 25px
+}
+
+.italics {
+    font-style: italic;
+}

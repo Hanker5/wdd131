@@ -8,8 +8,14 @@ let area = PI * radius * radius;
 
 console.log(area);
 
-const one = 1;
-const two = '2';
+const one = 1; //int
+const two = '2'; //string
+
+let result = one * two; //JS coerces the string '2' into the int 2
+console.log(result);
+
+result = one + two; //JS concatenates the int 1 and the string '2' into the string '12'
+console.log(result);
                     
 let course = "CSE131"; //global scope
 if (true) {

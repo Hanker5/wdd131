@@ -47,6 +47,8 @@ newPara.innerText = "add text here";
 const topics = document.querySelector('#topics');
 topics.appendChild(newPara);
                 
-
+const image = document.querySelector('img');
+image.setAttribute('src', 'html_css_js.jpg');
+image.setAttribute('alt', 'new logo with black background');
 
                     

@@ -21,7 +21,8 @@
     margin-bottom: 0px;
     color: var(--subHeadColor);
 }
-#content img{
+
+img{
     width: 150px;
 }
 

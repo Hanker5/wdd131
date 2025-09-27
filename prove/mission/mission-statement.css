@@ -1,39 +1,33 @@
+:root {
+    --linecolor: #808080;
+    --subHeadColor: #035f9c;
+}
+
 #content {
     margin: 0 auto;
     max-width: 30%;
     text-align: center;
-    border: 1px solid gray;
+    border: 1px solid var(--linecolor);
     padding: 60px 100px;
     line-height: 1.5em;
+    color: black;
 }
 #content hr {
     margin-top: 0px;
-    color: gray;
+    color: var(--linecolor);
 }
 #content h2{
     font-size: 15px;
     margin-bottom: 0px;
-    color: #035f9c;
+    color: var(--subHeadColor);
+}
+#content img{
+    width: 150px;
 }
 
 #info {
     text-align: left;
     margin-top: 30px;
-}
-
-#logo {
-    line-height: 0px;
-    margin-top: 50px;
-}
-#logo h1 {
-    color: #035f9c;
-}
-#logo hr {
-    max-width: 15%;
-    color: #035f9c;
-}
-#logo h2{
-    font-size: 25px
 }
 
 .italics {

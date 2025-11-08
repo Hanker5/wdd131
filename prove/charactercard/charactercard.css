@@ -1,0 +1,30 @@
+main{
+    text-align: center;
+}
+#card {
+    width: fit-content;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    background-color: rgb(45, 45, 45);
+    box-shadow: 0px 0px 20px rgba(0,0,0,1);
+    border-radius: 20px;
+}
+#card img {
+    width: 500px;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+}
+#characterName {
+    text-align: left;
+    color: white;
+    background-color: rgb(167, 167, 23);
+    margin: 0;
+    padding: 1px 0px;
+}
+#characterName h1 {
+    margin-left: 20px;
+}
+#card p {
+    color: white;
+}

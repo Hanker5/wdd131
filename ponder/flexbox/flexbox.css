@@ -1,0 +1,42 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    max-width: 1280px;
+    margin: auto;
+    padding: 1em;
+}
+
+img {
+    max-width: 100%;
+}
+
+.main-nav {
+    display: flex;
+    list-style-type: none;
+    justify-content: end;
+}
+
+a {
+    margin: 20px;
+}
+
+hr{
+    margin-top: 50px;
+}
+              
+.media-card-container{
+    display: flex;
+    flex-direction: row;
+}
+.media-card{
+    display: flex;
+    flex-direction: column;
+}
+.media-card-content{
+    display: flex;
+    flex-direction: column;
+}

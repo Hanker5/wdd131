@@ -1,0 +1,31 @@
+<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient background -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#006BB8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#39304A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="60" height="60" rx="12" fill="url(#bgGrad)"/>
+
+  <!-- Pixel art style game cube -->
+  <g transform="translate(30, 22)">
+    <!-- Top face -->
+    <path d="M 0,-8 L 10,0 L 0,8 L -10,0 Z" fill="#C2AFF0" opacity="0.9"/>
+    <!-- Left face -->
+    <path d="M -10,0 L 0,8 L 0,18 L -10,10 Z" fill="#006BB8" opacity="0.7"/>
+    <!-- Right face -->
+    <path d="M 10,0 L 0,8 L 0,18 L 10,10 Z" fill="#EFF6EE" opacity="0.9"/>
+  </g>
+
+  <!-- Code brackets at bottom -->
+  <g transform="translate(30, 46)">
+    <path d="M -8,0 L -10,0 L -10,8 L -8,8" stroke="#C2AFF0" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M 8,0 L 10,0 L 10,8 L 8,8" stroke="#C2AFF0" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <circle cx="-3" cy="4" r="1" fill="#C2AFF0"/>
+    <circle cx="0" cy="4" r="1" fill="#C2AFF0"/>
+    <circle cx="3" cy="4" r="1" fill="#C2AFF0"/>
+  </g>
+</svg>

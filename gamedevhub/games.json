@@ -1,0 +1,81 @@
+[
+  {
+    "name": "Game Over Friend",
+    "description": "A psychological horror-comedy where a close friend realizes they are trapped inside a video game, twisting reality as the player progresses.",
+    "tags": [
+      "Horror",
+      "Psychological",
+      "Comedy"
+    ],
+    "status": "Planning",
+    "image": "images/game-over-friend.png",
+    "dateCreated": "12-11-2025",
+    "featured": true
+  },
+  {
+    "name": "Mythros: Hollow Recall",
+    "description": "A retro pixel-art fantasy adventure set in a world of ancient mysteries, focusing on exploration and atmospheric storytelling.",
+    "tags": [
+      "Adventure",
+      "Pixel Art",
+      "Fantasy"
+    ],
+    "status": "Prototype",
+    "image": "images/mythros.png",
+    "dateCreated": "12-11-2025",
+    "featured": true
+  },
+  {
+    "name": "Defective",
+    "description": "An 8-bit style cooperative puzzle and platforming game where players must work together to solve environmental challenges, but one player is secretly defective.",
+    "tags": [
+      "Co-op",
+      "Puzzle",
+      "Platformer",
+      "Retro"
+    ],
+    "status": "In Development",
+    "image": "images/defective.png",
+    "dateCreated": "12-11-2025",
+    "featured": true
+  },
+  {
+    "name": "Snow Shoveling Simulator",
+    "description": "A simple, satisfying progression simulator where players shovel snow, upgrade tools, and earn money to clear increasingly challenging areas.",
+    "tags": [
+      "Simulator",
+      "Casual",
+      "Progression"
+    ],
+    "status": "Planning",
+    "image": "images/snow-shoveling.png",
+    "dateCreated": "12-11-2025",
+    "featured": false
+  },
+  {
+    "name": "The Traveling Bard",
+    "description": "A game that combines rythm, adventure, and detective work. The player explores the world playing music for different cities, and must learn what music the people there like.",
+    "tags": [
+      "Rythm",
+      "Adventure",
+      "Fantasy"
+    ],
+    "status": "Planning",
+    "image": "images/traveling-bard.png",
+    "dateCreated": "12-11-2025",
+    "featured": false
+  },
+  {
+    "name": "Meadowrise",
+    "description": "What appears to be, and is advertised as, a simple farming game similar to stardew valley, slowly turns into a horror game.",
+    "tags": [
+      "Horror",
+      "Farming",
+      "Zombies"
+    ],
+    "status": "Planning",
+    "image": "images/meadowrise.png",
+    "dateCreated": "12-11-2025",
+    "featured": false
+  }
+]

@@ -2,6 +2,28 @@ let games = [];
 let gamesContainer;
 let searchInput;
 let searchButton;
+let announcementDiv;
+
+function announceSearchResults(count, query) {
+    if (!announcementDiv) {
+        announcementDiv = document.querySelector('#search-results-announcement');
+    }
+
+    if (announcementDiv) {
+        let message;
+        if (query === '') {
+            message = `Showing all ${count} games`;
+        } else if (count === 0) {
+            message = `No games found for "${query}"`;
+        } else if (count === 1) {
+            message = `Found 1 game matching "${query}"`;
+        } else {
+            message = `Found ${count} games matching "${query}"`;
+        }
+
+        announcementDiv.textContent = message;
+    }
+}
 
 async function loadGames() {
     try {
@@ -56,6 +78,7 @@ function searchGames() {
 
     if (query === '') {
         renderAllGames(games);
+        announceSearchResults(games.length, query);
         return;
     }
 
@@ -76,6 +99,7 @@ function searchGames() {
 
     const sortedGames = filteredGames.sort(compareGames);
     renderAllGames(sortedGames);
+    announceSearchResults(sortedGames.length, query);
     console.log(`Found ${sortedGames.length} games matching "${query}"`);
 }
 
@@ -120,6 +144,7 @@ function init() {
     gamesContainer = document.querySelector('#games-container');
     searchInput = document.querySelector('#search');
     searchButton = document.querySelector('#search-button');
+    announcementDiv = document.querySelector('#search-results-announcement');
     setupEventListeners();
     loadGames();
 }

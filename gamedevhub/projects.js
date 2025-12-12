@@ -32,6 +32,15 @@ async function loadGames() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         games = await response.json();
+
+        // Pre-compute lowercase strings for search optimization
+        games.forEach(game => {
+            game._searchName = game.name.toLowerCase();
+            game._searchDescription = game.description.toLowerCase();
+            game._searchStatus = game.status.toLowerCase();
+            game._searchTags = game.tags.map(tag => tag.toLowerCase());
+        });
+
         console.log('Games loaded:', games);
         renderAllGames(games);
     } catch (error) {
@@ -58,7 +67,7 @@ function formatDate(dateString) {
 function gameCardTemplate(game) {
     return `
         <article class="game-card">
-            <img src="${game.image}" alt="${game.name} game screenshot">
+            <img src="${game.image}" alt="${game.name} game screenshot" loading="lazy">
             <div class="game-card-content">
                 <h3>${game.name}</h3>
                 ${statusBadgeTemplate(game.status)}
@@ -83,10 +92,11 @@ function searchGames() {
     }
 
     const filteredGames = games.filter(game => {
-        const nameMatch = game.name.toLowerCase().includes(query);
-        const descriptionMatch = game.description.toLowerCase().includes(query);
-        const statusMatch = game.status.toLowerCase().includes(query);
-        const tagsMatch = game.tags.some(tag => tag.toLowerCase().includes(query));
+        // Use pre-computed lowercase strings for better performance
+        const nameMatch = game._searchName.includes(query);
+        const descriptionMatch = game._searchDescription.includes(query);
+        const statusMatch = game._searchStatus.includes(query);
+        const tagsMatch = game._searchTags.some(tag => tag.includes(query));
 
         return nameMatch || descriptionMatch || statusMatch || tagsMatch;
     });
@@ -105,7 +115,7 @@ function searchGames() {
 
 function renderGame(game, container) {
     const html = gameCardTemplate(game);
-    container.innerHTML += html;
+    container.insertAdjacentHTML('beforeend', html);
 }
 
 function renderAllGames(gamesToRender) {

@@ -33,7 +33,7 @@ function formatDate(dateString) {
 function gameCardTemplate(game) {
     return `
         <article class="game-card">
-            <img src="${game.image}" alt="${game.name} game screenshot">
+            <img src="${game.image}" alt="${game.name} game screenshot" loading="lazy">
             <div class="game-card-content">
                 <h3>${game.name}</h3>
                 ${statusBadgeTemplate(game.status)}
@@ -49,7 +49,7 @@ function gameCardTemplate(game) {
 
 function renderGame(game, container) {
     const html = gameCardTemplate(game);
-    container.innerHTML += html;
+    container.insertAdjacentHTML('beforeend', html);
 }
 
 function renderFeaturedGames() {

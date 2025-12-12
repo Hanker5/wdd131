@@ -302,6 +302,7 @@ main {
 .game-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 107, 184, 0.2);
+    will-change: transform, box-shadow;
 }
 
 .game-card img {
